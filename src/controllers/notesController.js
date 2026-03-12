@@ -36,7 +36,7 @@ export const getNoteById = async (req, res) => {
   const { noteId } = req.params;
 
   const note = await Note.findOne({
-    noteId,
+    _id: noteId,
     userId: req.user._id,
   });
 
