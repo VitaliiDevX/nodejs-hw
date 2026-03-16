@@ -77,7 +77,7 @@ export const updateNote = async (req, res) => {
     { _id: noteId, userId: req.user._id },
     req.body,
     {
-      new: true,
+      returnDocument: 'after',
     },
   );
 
